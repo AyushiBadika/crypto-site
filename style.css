@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background-image: url("images/hero-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #8aacdb;
+}
+
+/* ANIMATIONS */
+@keyframes updown {
+  0% {
+    transform: translateY(0); /* Start position */
+  }
+  50% {
+    transform: translateY(-50px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Return to start position */
+  }
+}
+
+@keyframes rollHorizontally {
+  0% {
+    transform: translateX(5rem);
+  }
+  100% {
+    transform: translateX(-124rem); /* Adjust the translation value as needed */
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 5rem;
+}
+
+.site-logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 3.75;
+  cursor: pointer;
+}
+
+.site-logo a {
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.75rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1.1;
+}
+
+.navbar-links div:hover {
+  color: rgb(184, 220, 252);
+  transform: scale(1.125);
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+
+  align-items: flex-start;
+  gap: 7.5rem;
+  padding: 7.5rem 5rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-text-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.hero-search-input input {
+  border-radius: 5px;
+  background: rgb(249, 250, 250);
+  border: 1px solid rgb(181, 189, 196);
+  font-size: 16px;
+  height: 40px;
+  line-height: 24px;
+  padding: 7px 8px;
+  color: rgb(8, 9, 10);
+  box-shadow: none;
+  width: 20rem;
+}
+
+.hero-search-input input:focus {
+  background-color: #fff;
+  border-color: #3b49df;
+  box-shadow: 1px 1px 0 #3b49df;
+}
+
+.hero-search-input button,
+.btn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10.5px 20px;
+  border: 1px solid #222222;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: #fff;
+  color: #222222;
+}
+
+.hero-search-input button:hover,
+.btn:hover {
+  border-color: #000000;
+  background: #f7f7f7;
+}
+
+.hero-search-input button:active,
+.btn:active {
+  transform: scale(0.95);
+}
+
+.hero-graphic img {
+  width: 35rem;
+  animation: updown 2s infinite alternate;
+}
+
+/* TRENDING COINS SECTION */
+.trending-coins {
+  padding: 2rem 5rem;
+}
+
+.trending-coins-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.trending-coins-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+/* COIN CARD */
+.coin-card {
+  background-color: #15243d;
+  border-radius: 2rem;
+  width: 10rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  cursor: pointer;
+  align-items: center;
+}
+
+.coin-image img {
+  border-radius: 50%;
+  height: 6rem;
+  margin-bottom: 1rem;
+}
+
+.coin-name {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.coin-price-usd {
+  margin-bottom: 1rem;
+}
+
+.coin-market-cap {
+  /* text-align: center; */
+  color: #8aacdb;
+  /* margin-bottom: 0.rem; */
+}
