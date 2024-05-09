@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector(".search-input");
 
   searchBtn.addEventListener("click", () => {
-    window.location.href = `/search.html?query=${searchInput.value}`;
+    window.location.href = `/crypto-site/search.html?query=${searchInput.value}`;
   });
 
   async function getTrending() {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Appeding all div in coin card
     coinCard.append(imageDiv, coinNameId, coinPrice, showMore);
     showMore.addEventListener("click", () => {
-      window.location.href = `/crypto.html?coin=${id}`;
+      window.location.href = `/crypto-site/crypto.html?coin=${id}`;
     });
     // Appeding coin card in trending section
     trendingCoinsSection.append(coinCard);

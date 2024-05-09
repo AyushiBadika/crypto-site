@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Appeding all div in coin card
     coinCard.append(imageDiv, coinNameId, showMore);
     showMore.addEventListener("click", () => {
-      window.location.href = `/crypto.html?coin=${id}`;
+      window.location.href = `/crypto-site/crypto.html?coin=${id}`;
     });
     // Appeding coin card in trending section
     searchResultsList.append(coinCard);
